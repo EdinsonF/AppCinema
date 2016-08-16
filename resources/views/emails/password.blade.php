@@ -1,0 +1,1 @@
+Sigue el link {{ url('password/reset/'.$token) }}

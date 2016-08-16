@@ -30,6 +30,7 @@
 		    	</div>
 		    		{!!Form::submit('Entar',['class'=>'btn btn-primary'])!!}
 		    {!!Form::close()!!}
+		    {!! link_to('password/email', $title='Olvidaste tu contraseña?', $attributes=null,$secure=null)!!}
 		    
 		</div>
 

@@ -15,6 +15,10 @@ Route::get('/','FrontController@index');
 Route::get('contacto','FrontController@contacto');
 Route::get('reviews','FrontController@reviews');
 Route::get('admin','FrontController@admin');
+ Route::get('password/email','Auth\PasswordController@getEmail');
+Route::post('password/email','Auth\PasswordController@postEmail');
+
+
 
 
 
@@ -35,5 +39,5 @@ Route::get('movie/destroy/{id}','MovieController@destroy');
 Route::resource('movie','MovieController');
 
 
-
+Route::resource('mail','MailController');
 

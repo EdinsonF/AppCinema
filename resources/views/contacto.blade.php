@@ -2,7 +2,8 @@
 
 
 @section('content')
-
+		@include('alerts.successForm')
+		
 		<div class="contact-content">
 			<div class="top-header span_top">
 				<div class="logo">
@@ -15,21 +16,20 @@
 		</div>
 			<!---contact-->
 		<div class="main-contact">
-			 <h3 class="head">CONTACT</h3>
-			 <p>WE'RE ALWAYS HERE TO HELP YOU</p>
+			 <h3 class="head">Contactanos</h3>
+			 <p>Estamos aqui para ayudarte</p>
 			 <div class="contact-form">
-				 <form>
+				 {!! Form::open(['route'=>'mail.store', 'method'=>'POST']) !!}
 					 <div class="col-md-6 contact-left">
-						  <input type="text" placeholder="Name" required/>
-						  <input type="text" placeholder="E-mail" required/>
-						  <input type="text" placeholder="Phone" required/>
+						 {!! Form::text('name', null,['placeholder'=>'Nombre']) !!}
+						  {!! Form::text('email', null,['placeholder'=>'Email']) !!}
 					  </div>
 					  <div class="col-md-6 contact-right">
-						 <textarea placeholder="Message"></textarea>
-						 <input type="submit" value="SEND"/>
+						 {!! Form::textarea('mensaje', null,['placeholder'=>'Mensaje']) !!}
+						 {!! Form::submit('Enviar') !!}
 					 </div>
 					 <div class="clearfix"></div>
-				 </form>
+				 {!! Form::close() !!}
 		     </div>
 		</div>
 

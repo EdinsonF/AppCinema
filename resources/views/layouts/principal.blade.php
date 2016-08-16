@@ -2,11 +2,11 @@
 <html>
 <head>
 <title>Cinema</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="{{ url('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url('css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
 <!-- Custom Theme files -->
-<script src="js/jquery.min.js"></script>
+<script src="{{ url('js/jquery.min.js') }}"></script>
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -28,9 +28,9 @@
 
 
             <div class="footer">
-                <h6>Disclaimer : </h6>
-                <p class="claim">This is a freebies and not an official website, I have no intention of disclose any movie, brand, news.My goal here is to train or excercise my skill and share this freebies.</p>
-                <a href="example@mail.com">example@mail.com</a>
+                <h6>Atención : </h6>
+                <p class="claim">Esto no es un sitio oficial, solo lo he desarrollado siguiendo un video tutorial, no es comercializable.</p>
+                <a href="example@mail.com">todo es netamente academico</a>
                 <div class="copyright">
                     <p> Template by  <a href="http://w3layouts.com">  W3layouts</a></p>
                 </div>
@@ -65,7 +65,7 @@
         });
         });
     </script>  
-    <script type="text/javascript" src="js/jquery.flexisel.js"></script>    
+    <script type="text/javascript" src="{{ url('js/jquery.flexisel.js')}}"></script>    
         
 </body>
 </html>
