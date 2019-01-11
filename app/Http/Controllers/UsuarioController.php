@@ -44,13 +44,10 @@ class UsuarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(UserCreateRequest $request)
-    {
-        User::create([
-            'first_name'    =>$request['first_name'],
-            'last_name'     =>$request['last_name'],
-            'email'         =>$request['email'],
-            'password'      =>$request['password'],
-            ]);
+    {   
+        $user = new User;
+        $user->fill($request->all());
+        $user->save();
 
         Session::flash('mensaje','Usuario Registrado Exitosamente!');
         return redirect('/usuario/list');
@@ -101,7 +98,9 @@ class UsuarioController extends Controller
     public function update(UserUpdateRequest $request, $id)
     {
         $user=User::find($id);
+
         $user->fill($request->all());
+
         $user->save();
         Session::flash('mensaje','Usuario Editado Exitosamente!');
         return redirect('/usuario/list');

@@ -39,7 +39,7 @@ class LoginController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        if(Auth::Attempt(['email'=>$request['email'], 'password'=>$request['password']]))
+        if(Auth::Attempt(['email'=>$request['email'], 'password' =>$request['password'] ])  )
         {
             return Redirect::to('admin');
         }
